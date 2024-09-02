@@ -1,5 +1,5 @@
 <H3> Name: NISHA D </H3>
-<H3>Register No.: 212223230143 </H3>
+<H3>Register No: 212223230143 </H3>
 <H3> Experiment 1</H3>
 <H3>DATE: 02/09/2024</H3>
 <H1 ALIGN=CENTER> Implementation of Bayesian Networks</H1>
