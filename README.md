@@ -75,9 +75,10 @@ margins=False, normalize='index') .sort_index().to_numpy().reshape(-1).tolist()
 H9am = BbnNode(Variable(0, 'H9am', ['<=60', '>60']), probs(df, child='Humidity9amCat'))
 H3pm = BbnNode(Variable(1, 'H3pm', ['<=60', '>60']), probs(df, child='Humidity3pmCat',
  parent1='Humidity9amCat'))
-W = BbnNode(Variable(2, 'W', ['<=40', '40-50', '>50']), probs(df, child='WindGustSpeedCat'))
-RT = BbnNode(Variable(3, 'RT', ['No', 'Yes']), probs(df, child='RainTomorrow', parent1=
-'Humidity3pmCat',parent2='WindGustSpeedCat'))
+W = BbnNode(Variable(2, 'W', ['<=40', '40-50', '>50']), probs(df,
+child='WindGustSpeedCat'))
+RT = BbnNode(Variable(3, 'RT', ['No', 'Yes']), probs(df,
+child='RainTomorrow',parent1='Humidity3pmCat',parent2='WindGustSpeedCat'))
 
 bbn = Bbn() \
     .add_node(H9am) \
@@ -111,7 +112,8 @@ plt.show()
 print(probs(df, child='Humidity9amCat'))
 print(probs(df, child='Humidity3pmCat', parent1='Humidity9amCat'))
 print(probs(df, child='WindGustSpeedCat'))
-print(probs(df, child='RainTomorrow', parent1='Humidity3pmCat', parent2='WindGustSpeedCat'))
+print(probs(df, child='RainTomorrow', parent1='Humidity3pmCat'
+, parent2='WindGustSpeedCat'))
 ```
 ## Output:
 
